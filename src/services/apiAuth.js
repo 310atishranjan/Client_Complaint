@@ -1,11 +1,10 @@
 import axios from "axios";
 
 const apiURL = import.meta.env.VITE_BASE_URL;
-
 export async function signup({ data }) {
   let userDetail = {};
   try {
-    const res = await axios.post(`${apiURL}/user/register`, data);
+    const res = await axios.post(`${apiURL}/api/v1/user/register`, data);
     userDetail = res.data;
   } catch (err) {
     console.log(err);
